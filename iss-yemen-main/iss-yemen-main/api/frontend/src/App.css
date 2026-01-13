@@ -1,0 +1,56 @@
+/* Import centralized theme */
+@import './styles/theme.css';
+
+/* Modern app-wide styles with animations */
+body {
+  margin: 0;
+  background: var(--bg-tertiary, #f0f7f6); /* Light muted teal background to match theme */
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  color: var(--text-primary);
+}
+
+main {
+  min-height: calc(100vh - 72px);
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  main {
+    min-height: calc(100vh - 64px);
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    min-height: calc(100vh - 60px);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+}

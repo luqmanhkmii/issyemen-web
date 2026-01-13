@@ -1,0 +1,550 @@
+/* Modern Auth Pages with Professional Styling and Animations - Responsive */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4a6fa5 0%, #1a2a4a 100%);
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 0.75rem;
+  }
+}
+
+/* Updated gradient to match UTM professional blue color scheme */
+.auth-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 25px 80px rgba(74, 111, 165, 0.2);
+  width: 100%;
+  max-width: 30rem;
+  padding: 3rem 2.5rem;
+  z-index: 10;
+  position: relative;
+  animation: slideInUp 0.6s ease-out;
+}
+
+@media (max-width: 1024px) {
+  .auth-card {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-card {
+    padding: 2rem 1.5rem;
+    border-radius: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2.25rem;
+  animation: fadeInDown 0.7s ease-out;
+}
+
+@media (max-width: 768px) {
+  .auth-header {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.auth-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2a4a;
+  margin: 0 0 0.75rem 0;
+  background: linear-gradient(135deg, #4a6fa5, #1a2a4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+@media (max-width: 1024px) {
+  .auth-header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-header h1 {
+    font-size: 1.35rem;
+  }
+}
+
+.auth-header p {
+  font-size: 0.9375rem;
+  color: #7f8c8d;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .auth-header p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Enhanced form styling with modern input design */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .auth-form {
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.form-group:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.form-group:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.form-group:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.form-group:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2c3e50;
+  letter-spacing: 0.3px;
+}
+
+.form-input {
+  padding: 0.875rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 0.625rem;
+  font-size: 0.9375rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  background-color: #f9f9f9;
+  width: 100%;
+  text-align: center !important;
+  letter-spacing: 0.1em;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .form-input {
+    font-size: 0.9rem;
+    padding: 0.8125rem 0.9375rem;
+  }
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4a6fa5;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(74, 111, 165, 0.1);
+  transform: translateY(-2px);
+  text-align: center !important;
+}
+
+.form-input::placeholder {
+  color: #b0b0b0;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+/* Ensure OTP input is properly centered */
+.form-input[type="text"][name="otp"] {
+  text-align: center;
+  letter-spacing: 0.3em;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.form-input[type="password"] {
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-size: 1rem;
+}
+
+.form-input.password-input {
+  text-align: center;
+  letter-spacing: 0.1em; /* Less spacing when visible */
+  font-size: 1rem;
+}
+
+.form-input.password-input[type="text"] {
+  letter-spacing: 0.05em; /* Normal spacing when password is visible */
+}
+
+.form-input[type="email"] {
+  text-align: center;
+}
+
+/* Password input wrapper with eye icon */
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-wrapper .password-input {
+  padding-right: 3rem; /* Space for eye icon */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f8c8d;
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.password-toggle:hover {
+  color: #4a6fa5;
+}
+
+.password-toggle:focus {
+  outline: none;
+  color: #4a6fa5;
+}
+
+.password-toggle svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+/* OTP specific styles */
+.otp-timer {
+  text-align: center;
+  color: #4a6fa5;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0 0;
+}
+
+.otp-hint {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 0.8125rem;
+  margin: 0.25rem 0 0 0;
+  font-style: italic;
+}
+
+/* Modern button with gradient and enhanced hover effects */
+.submit-button {
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #4a6fa5 0%, #5a7fb5 100%);
+  color: white;
+  border: none;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0.75rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(74, 111, 165, 0.2);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .submit-button {
+    font-size: 0.95rem;
+    padding: 0.8125rem 1.375rem;
+  }
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(74, 111, 165, 0.35);
+  background: linear-gradient(135deg, #5a7fb5 0%, #4a6fa5 100%);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error and success messages with animations */
+.error-message {
+  padding: 0.875rem 1rem;
+  background: linear-gradient(135deg, #fee 0%, #fdd 100%);
+  color: #c53030;
+  border-radius: 0.625rem;
+  font-size: 0.875rem;
+  border-left: 4px solid #e74c3c;
+  font-weight: 500;
+  animation: slideInDown 0.4s ease-out;
+}
+
+@media (max-width: 768px) {
+  .error-message {
+    font-size: 0.85rem;
+    padding: 0.8125rem 0.9375rem;
+  }
+}
+
+.success-message {
+  padding: 0.875rem 1rem;
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  border-radius: 0.625rem;
+  font-size: 0.875rem;
+  border-left: 4px solid #5cb85c;
+  font-weight: 500;
+  animation: slideInDown 0.4s ease-out;
+}
+
+@media (max-width: 768px) {
+  .success-message {
+    font-size: 0.85rem;
+    padding: 0.8125rem 0.9375rem;
+  }
+}
+
+/* Navigation links */
+.auth-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@media (max-width: 768px) {
+  .auth-links {
+    gap: 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+.link-text {
+  color: #4a6fa5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.link-text::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #5cb85c;
+  transition: width 0.3s ease;
+}
+
+.link-text:hover {
+  color: #5cb85c;
+}
+
+.link-text:hover::after {
+  width: 100%;
+}
+
+.separator {
+  color: #d0d0d0;
+  font-weight: 300;
+}
+
+/* Decorative background elements */
+.auth-decoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.decoration-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.08;
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 21.875rem;
+  height: 21.875rem;
+  max-width: 90vw;
+  max-height: 90vw;
+  background: white;
+  top: -7.5rem;
+  right: -6.25rem;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 15.625rem;
+  height: 15.625rem;
+  max-width: 70vw;
+  max-height: 70vw;
+  background: white;
+  bottom: -5rem;
+  left: -5rem;
+  animation-delay: 2s;
+}
+
+@media (max-width: 768px) {
+  .decoration-circle {
+    opacity: 0.05;
+  }
+
+  .circle-1 {
+    width: 15.625rem;
+    height: 15.625rem;
+    top: -6rem;
+    right: -4rem;
+  }
+
+  .circle-2 {
+    width: 11.25rem;
+    height: 11.25rem;
+    bottom: -4rem;
+    left: -4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle-1 {
+    width: 12.5rem;
+    height: 12.5rem;
+    top: -5rem;
+    right: -3rem;
+  }
+
+  .circle-2 {
+    width: 9rem;
+    height: 9rem;
+    bottom: -3rem;
+    left: -3rem;
+  }
+}
+
+/* Additional animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(74, 111, 165, 0.2);
+  border-top-color: #4a6fa5;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
