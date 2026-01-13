@@ -36,10 +36,10 @@ export default function HomePage() {
         getHODs().catch(() => ({ hods: [] })) // Fetch HODs for all users (members and visitors)
       ])
       
-      setSummary(homepageData.summary || { news: 0, announcements: 0, activities: 0 })
-      const newsAndAnnouncements = homepageData.latestNewsAndAnnouncements || []
+      setSummary(homepageData?.summary || { news: 0, announcements: 0, activities: 0 })
+      const newsAndAnnouncements = homepageData?.latestNewsAndAnnouncements || []
       setLatestNewsAndAnnouncements(newsAndAnnouncements)
-      setRegularActivities(homepageData.regularActivities || [])
+      setRegularActivities(homepageData?.regularActivities || [])
       
       if (eventsData.events) {
         // Filter out announcements, activities, and news - only show actual events
